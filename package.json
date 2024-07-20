@@ -1,0 +1,9 @@
+{
+  "name": "toolla",
+  "version": "0.0.1",
+  "description": "High level tool use for Claude models",
+  "main": "index.js",
+  "repository": "https://github.com/joorjeh/toollajs",
+  "author": "George Balch",
+  "license": "MIT"
+}
