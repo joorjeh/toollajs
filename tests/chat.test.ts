@@ -1,5 +1,5 @@
-import {Message} from '@anthropic-ai/sdk/resources';
-import {Chat} from '../src/chat';
+import { Message } from '@anthropic-ai/sdk/resources';
+import { Chat } from '../src/chat';
 
 describe('Test Chat class', () => {
   test('Sanity check', () => {
@@ -8,4 +8,8 @@ describe('Test Chat class', () => {
       expect(message.stop_reason).toEqual('end_turn');
     });
   });
+
+  //test('Check single tool use', () => {
+  //  const chat = new Chat();
+  //});
 });
