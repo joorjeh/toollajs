@@ -1,5 +1,5 @@
 import Anthropic from '@anthropic-ai/sdk';
-import { Message } from '@anthropic-ai/sdk/resources';
+import {Message} from '@anthropic-ai/sdk/resources';
 
 class Chat {
   private model: string;
@@ -16,24 +16,23 @@ class Chat {
     this.messages = [];
   }
 
-  public call(prompt: string): void {
-    this.client.messages
-      .create({
-        max_tokens: this.max_tokens,
-        model: 'claude-3-5-sonnet-20240620',
-        messages: [
-          {
-            role: 'user',
-            content: prompt,
-          },
-        ],
-      })
-      .then((message: Message) => {
-        this.messages.push(message);
-        console.log(message);
-      });
+  public async call(prompt: string): Promise<Message> {
+    const message = await this.client.messages.create({
+      max_tokens: this.max_tokens,
+      model: this.model,
+      messages: [
+        {
+          role: 'user',
+          content: prompt,
+        },
+      ],
+    });
+    this.messages.push(message);
+    return message;
   }
 }
 
 //const chat = new Chat();
-//chat.call('Hello');
+//chat.call('Hello').then((message: Message) => {
+//  console.log(message);
+//});
