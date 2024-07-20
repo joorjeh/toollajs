@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "High level tool use for Claude models",
   "scripts": {
-    "build": "npx tsc",
+    "build": "gts lint && npx tsc",
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "tsc",
