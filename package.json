@@ -2,7 +2,18 @@
   "name": "toolla",
   "version": "0.0.1",
   "description": "High level tool use for Claude models",
-  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "yarn run compile",
+    "pretest": "yarn run compile",
+    "posttest": "yarn run lint"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": "https://github.com/joorjeh/toollajs",
   "keywords": [
     "LLM",
@@ -17,7 +28,9 @@
   "author": "George Balch",
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^5.5.3"
+    "gts": "^5.3.1",
+    "typescript": "^5.5.3",
+    "@types/node": "20.12.7"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.24.3"
