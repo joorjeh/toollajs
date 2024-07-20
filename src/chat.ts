@@ -33,8 +33,3 @@ class Chat {
 }
 
 export {Chat};
-
-//const chat = new Chat();
-//chat.call('Hello').then((message: Message) => {
-//  console.log(message);
-//});
