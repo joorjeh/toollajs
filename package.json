@@ -15,5 +15,11 @@
   },
   "homepage": "https://github.com/joorjeh/toollajs",
   "author": "George Balch",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.3"
+  }
 }
